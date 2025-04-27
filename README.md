@@ -29,7 +29,7 @@ Copy the datasets into the dataops directory inside the Spark container:
 ```bash
 cd datasets
 docker cp tmdb_5000_credits.csv spark_client:/dataops
-docker cp tmdb_5000_moviess.csv spark_client:/dataops
+docker cp tmdb_5000_movies.csv spark_client:/dataops
 ```
 Copy the files from the scripts folder into their respective containers:
 ```bash
