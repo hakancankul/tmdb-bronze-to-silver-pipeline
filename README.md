@@ -24,5 +24,10 @@ First, bring up the Docker environment. To do this, navigate to the directory wh
 ```bash
 cd 01_airflow_spark_minio
 docker-compose up -d --build
-
-
+```
+Copy the datasets into the dataops directory inside the Spark container.
+```bash
+cd datasets
+docker cp tmdb_5000_credits.csv spark_client:/dataops
+docker cp tmdb_5000_moviess.csv spark_client:/dataops
+```
