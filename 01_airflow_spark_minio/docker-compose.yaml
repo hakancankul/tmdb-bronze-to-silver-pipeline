@@ -177,8 +177,9 @@ services:
     networks:
       - airflow_spark_minio
     volumes:
-      - spark:/dataops
-    command: sleep infinity
+      - ./spark:/dataops
+      - ./setup.sh:/setup.sh
+    command: bash /setup.sh
 
 volumes:
   postgres-db-volume:
