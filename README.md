@@ -34,8 +34,8 @@ docker cp tmdb_5000_moviess.csv spark_client:/dataops
 Copy the files from the scripts folder into their respective containers:
 ```bash
 cd scripts
-docker cp create_bucket.py spark_client:/dataops
-docker cp credits_bronze_to_silver.py spark_client:/dataops
-docker cp movies_bronze_to_silver.py spark_client:/dataops
-docker cp final_project_dag.py airflow-scheduler:/opt/airflow/dags
+docker cp create_bucket.py spark_client:/dataops \
+docker cp credits_bronze_to_silver.py spark_client:/dataops \
+docker cp movies_bronze_to_silver.py spark_client:/dataops \
+docker cp final_project_dag.py airflow-scheduler:/opt/airflow/dags \
 ```
