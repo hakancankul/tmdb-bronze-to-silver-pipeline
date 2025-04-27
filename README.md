@@ -25,9 +25,17 @@ First, bring up the Docker environment. To do this, navigate to the directory wh
 cd 01_airflow_spark_minio
 docker-compose up -d --build
 ```
-Copy the datasets into the dataops directory inside the Spark container.
+Copy the datasets into the dataops directory inside the Spark container:
 ```bash
 cd datasets
 docker cp tmdb_5000_credits.csv spark_client:/dataops
 docker cp tmdb_5000_moviess.csv spark_client:/dataops
+```
+Copy the files from the scripts folder into their respective containers:
+```bash
+cd scripts
+docker cp create_bucket.py spark_client:/dataops
+docker cp credits_bronze_to_silver.py spark_client:/dataops
+docker cp movies_bronze_to_silver.py spark_client:/dataops
+docker cp final_project_dag.py airflow-scheduler:/opt/airflow/dags
 ```
