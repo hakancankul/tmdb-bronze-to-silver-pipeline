@@ -41,3 +41,9 @@ docker cp spark_sql.ipynb spark_client:/dataops
 
 docker cp final_project_dag.py airflow-scheduler:/opt/airflow/dags
 ```
+From the Airflow Web UI (http://localhost:8080), go to the "Admin" → "Connections" section and create a new connection.
+- **Connection ID:** `spark_ssh_conn`
+- **Connection Type:** `SSH`
+- **Host:** `spark_client`
+- **Username:** `ssh_train`
+- **Port:** `2`
