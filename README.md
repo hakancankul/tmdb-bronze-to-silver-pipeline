@@ -53,6 +53,7 @@ After entering the details, click **Test** to verify the connection.If the test 
 
 From the Spark client, set the appropriate chmod and chown permissions for the scripts
 ```bash
+docker exec -it spark_client bash
 cd dataops
 sudo chmod 777 create_bucket.py
 sudo chmod 777 credits_bronze_to_silver.py
@@ -66,6 +67,7 @@ sudo chown ssh_train:root spark_sql.ipynb
 ```
 Trigger the DAG file from the Airflow UI. After all tasks are completed, start Jupyter Lab from the Spark container to run queries.
 ```bash
+docker exec -it spark_client bash
 cd /dataops
 source airflowenv/bin/activate
 jupyter lab --ip 0.0.0.0 --port 8888 --allow-root
