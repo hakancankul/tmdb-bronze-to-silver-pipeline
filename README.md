@@ -23,4 +23,7 @@ It leverages **Apache Airflow**, **Apache Spark**, **MinIO**, and **PostgreSQL**
 
 ```bash
 cd 01_airflow_spark_minio
-./setup.sh
+docker-compose up -d --build
+
+
+
