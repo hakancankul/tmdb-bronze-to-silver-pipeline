@@ -20,10 +20,9 @@ It leverages **Apache Airflow**, **Apache Spark**, **MinIO**, and **PostgreSQL**
 3. At the end, a ready-to-query **Silver** layer is generated for analysis.
 
 ## How to Start
-
+First, bring up the Docker environment. To do this, navigate to the directory where the docker-compose.yaml file is located and run:
 ```bash
 cd 01_airflow_spark_minio
 docker-compose up -d --build
-
 
 
