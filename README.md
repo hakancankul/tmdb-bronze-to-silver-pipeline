@@ -46,6 +46,7 @@ From the Airflow Web UI (http://localhost:8080), go to the "Admin" → "Connecti
 - **Connection Type:** `SSH`
 - **Host:** `spark_client`
 - **Username:** `ssh_train`
+- **Password:** `Ankara06`
 - **Port:** `2`
 
 
