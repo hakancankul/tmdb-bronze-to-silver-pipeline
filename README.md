@@ -71,5 +71,6 @@ Trigger the DAG file from the Airflow UI. After all tasks are completed, start J
 docker exec -it spark_client bash
 cd /dataops
 source airflowenv/bin/activate
+pip install boto3
 jupyter lab --ip 0.0.0.0 --port 8888 --allow-root
 ```
