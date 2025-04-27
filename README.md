@@ -47,3 +47,26 @@ From the Airflow Web UI (http://localhost:8080), go to the "Admin" → "Connecti
 - **Host:** `spark_client`
 - **Username:** `ssh_train`
 - **Port:** `2`
+
+
+After entering the details, click **Test** to verify the connection.If the test is successful, click **Save**.
+
+From the Spark client, set the appropriate chmod and chown permissions for the scripts
+```bash
+cd dataops
+sudo chmod 777 create_bucket.py
+sudo chmod 777 credits_bronze_to_silver.py
+sudo chmod 777 movies_bronze_to_silver.py
+sudo chmod 777 spark_sql.ipynb
+
+sudo chown ssh_train:root create_bucket.py
+sudo chown ssh_train:root credits_bronze_to_silver.py
+sudo chown ssh_train:root movies_bronze_to_silver.py
+sudo chown ssh_train:root spark_sql.ipynb
+```
+Trigger the DAG file from the Airflow UI. After all tasks are completed, start Jupyter Lab from the Spark container to run queries.
+```bash
+cd /dataops
+source airflowenv/bin/activate
+jupyter lab --ip 0.0.0.0 --port 8888 --allow-root
+```
