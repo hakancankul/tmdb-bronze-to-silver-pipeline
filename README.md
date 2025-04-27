@@ -1,5 +1,5 @@
 # TMDB Bronze to Silver Pipeline
-
+![Schema](schema.png)
 This project builds a **Bronze → Silver** data pipeline using the TMDB dataset.  
 It leverages **Apache Airflow**, **Apache Spark**, **MinIO**, and **PostgreSQL** as core technologies.
 
